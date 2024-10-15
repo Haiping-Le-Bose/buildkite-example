@@ -4,6 +4,3 @@ steps:
     artifact_paths:
       - "build/*"
       - "build/test-results.xml"
-    plugins:
-      junit#v3.7.0:
-        files: "build/test-results.xml"
