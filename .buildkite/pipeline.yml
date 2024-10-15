@@ -1,4 +1,9 @@
 steps:
   - label: ":cpp: Build and Test"
     command: "scripts/script.sh"
-    artifact_paths: "artifacts/*"
+    artifact_paths:
+      - "build/*"
+      - "build/test-results.xml"
+    plugins:
+      junit#v3.7.0:
+        files: "build/test-results.xml"
